@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: IRANSANS;
+}
+
+body {
+  /* background-color: #e2e2e2; */
+  margin: auto;
+  width: 1200px;
+  margin-top: 75px;
+}
+header {
+  display: flex;
+  width: 1200px;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  /* border-bottom: 2px solid #6f8a33; */
+  transition: all 0.2s ease-in;
+  z-index: 5;
+  box-shadow: 0px 8px 15px -16px rgba(66, 68, 90, 0.5);
+}
+
+.ham {
+  display: none;
+}
+
+header img {
+  width: 70px;
+  height: 70px;
+  transition: all 0.2s ease;
+}
+
+header img:hover {
+  width: 75px;
+  height: 75px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  text-decoration: none;
+}
+
+header nav ul li {
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.link {
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  color: #6f8a33;
+}
+
+header nav ul li:hover {
+  color: #6f8a33;
+  font-weight: 500;
+  transform: scale(1.2);
+  padding: 0 10px;
+}
+
+header .khadamat {
+  margin: 0 10px;
+  padding: 5px 25px;
+  border-radius: 30px;
+  background-color: #6f8a33;
+  transition: all 0.2s ease;
+}
+
+header .khadamat:hover {
+  margin: 0 10px;
+  padding: 5px 27px;
+  border-radius: 30px;
+  background-color: #244082;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer div {
+  margin-top: 30px;
+  background-color: #4d4d4d;
+  width: 1200px;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+main .countainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.film-about {
+  margin: 0 20px 0 20px;
+  text-align: center;
+}
+
+.film-about h1 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.film-about video {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.text {
+  margin: 20px auto;
+}
+
+.text h3 {
+  margin: 15px auto;
+  font-size: 1.5rem;
+}
+
+.text p {
+  line-height: 30px;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.media .media-m {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.social-media,
+.tell-mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media div {
+  display: flex;
+  align-items: center;
+  margin: 20px 20px 1px 20px;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #eeeeeea8;
+  border-radius: 10px;
+  flex-grow: 5;
+  flex: 1 1;
+}
+
+.tell-mail div {
+  display: flex;
+  align-items: center;
+  flex-grow: 5;
+  flex: 1 1;
+  margin: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #eeeeeea8;
+  border-radius: 10px;
+}
+
+.tell-mail a,
+.social-media a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.media h1 {
+  margin-top: 50px;
+}
+
+@media (max-width: 557px) {
+  header {
+    margin: auto;
+    width: 100%;
+  }
+
+  .khadamat {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .hamburger input {
+    display: none;
+  }
+  .hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line {
+    fill: none;
+    stroke: #244082;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+
+  .hamburger input:checked + ul + svg {
+    transform: rotate(-45deg);
+  }
+
+  .hamburger input:checked + ul + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+
+  .ham {
+    display: inline-block;
+  }
+
+  #toggle-nav:checked + ul {
+    transform: translateX(0);
+    box-shadow: -5px 0px 120px -15px rgba(66, 68, 90, 0.5);
+  }
+
+  .list-menu {
+    transform: translateX(270px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    /* background-color: #6f8a33; */
+    background-color: rgba(255, 255, 255, 1);
+    /* backdrop-filter: blur(10px); */
+    width: 270px;
+    list-style-type: none;
+    padding: 20px;
+    transition: all 0.3s ease-out;
+  }
+
+  .list-menu li {
+    line-height: 40px;
+    /* background-color: rgba(90, 100, 69, 0.568); */
+    /* border: 2px solid #6f8a33; */
+    background-color: #eeeeee71;
+    padding: 5px 80px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .list-menu li:hover {
+    background-color: #6f8a33;
+  }
+
+  .list-menu a li {
+    text-decoration: none;
+    color: #6f8a33;
+  }
+
+  .list-menu a li:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  body {
+    width: auto;
+  }
+
+  footer div {
+    margin: auto;
+    width: calc(100% - 20px);
+  }
+
+  .text h3 {
+    margin: 0px auto -17px auto;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .text p {
+    line-height: 23px;
+    font-size: 0.9rem;
+    padding: 27px;
+    margin: 0 auto;
+  }
+
+  .film-about h1 {
+    margin-top: 20px;
+  }
+
+  .social-media,
+  .tell-mail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2px;
+    width: 100%;
+  }
+
+  .tell-mail {
+    margin-bottom: 20px;
+  }
+
+  .social-media div {
+    display: flex;
+    align-items: center;
+    margin: 5px 20px 1px 20px;
+    padding: 10px 20px;
+    width: 450px;
+    justify-content: center;
+  }
+
+  .tell-mail div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 20px;
+    width: 450px;
+  }
+
+  .tell-mail a,
+  .social-media a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+  }
+
+  .media h1 {
+    margin-top: 10px;
+  }
+}
